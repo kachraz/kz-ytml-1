@@ -13,7 +13,8 @@ from .utz import header1
 
 # === Get Env ===
 load_dotenv("src/.env")
-hf_token = os.getenv("HF")
+hf_t = os.getenv("HF")
+or_t = os.getenv("OR")
 
 
 # === Main File Entry Funvtion===
@@ -21,7 +22,8 @@ hf_token = os.getenv("HF")
 
 def ver1_main():
     # smol_1()
-    smol1_gradio()
+    # smol1_gradio()
+    env_print()
 
 # === Sun functions ===
 
@@ -30,7 +32,7 @@ def ver1_main():
 
 def env_print():
     header1("Env Print")
-    rprint(hf_token)
+    rprint(hf_t, or_t)
 
 # --- Example 1 run ---
 
