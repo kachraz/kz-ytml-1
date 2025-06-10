@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Borderless Tokyo Night",
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.renderWhitespace": "all",
+    "editor.guides.bracketPairs": "active",
+    "editor.fontSize": 25,
+    "editor.lineHeight": 2
+}
