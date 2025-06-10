@@ -2,11 +2,11 @@
 # Main Enty point for app
 # ================================================
 
-from src.utz import header1
+from src.ver1 import ver1_main
 
 
 def main():
-    header1("sniffo")
+    ver1_main()
 
 
 if __name__ == "__main__":
