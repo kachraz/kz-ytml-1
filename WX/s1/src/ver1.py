@@ -3,6 +3,9 @@
 # ================================================
 
 from .utz import header1
+import os 
+from dotenv import load_dotenv
+
 
 # === Main File Entry Funvtion===
 
