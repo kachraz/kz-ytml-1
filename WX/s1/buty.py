@@ -1,5 +1,12 @@
+# ================================================
+# Main Enty point for app
+# ================================================
+
+from src.utz import header1
+
+
 def main():
-    print("Hello from s1!")
+    header1("sniffo")
 
 
 if __name__ == "__main__":
