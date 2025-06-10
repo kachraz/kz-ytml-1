@@ -4,5 +4,6 @@
 
 # Dirz
 
-| Dir | What |
-| :-: | :--: |
+|        Dir        |        What        |
+| :---------------: | :----------------: |
+| [`smol`](./smol/) | Smol Agent CW here |
