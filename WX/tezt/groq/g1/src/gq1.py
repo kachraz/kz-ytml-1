@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from groq import Groq
 from rich import print as rpr
 
-from .outz import inspect_and_save_to_markdown, save_output_to_markdown
+from .outz import save_output_to_markdown
 from .utz import header1
 
 # --- Global Pussy ---
