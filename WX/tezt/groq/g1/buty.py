@@ -4,14 +4,17 @@
 
 # --- Imports ---
 
-from src.utz import header1
+from rich import print as rpr
+
+from src.gq1 import gq1_main
 
 # --- App Code ---
 
 
 def DrinkHerPiss():
-    header1("Smell Her Fart")
+    gq1_main()
 
 
 if __name__ == "__main__":
     DrinkHerPiss()
+    rpr("🍫 smell")
