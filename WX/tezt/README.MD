@@ -7,5 +7,6 @@
 
 # Dirz
 
-| Dirz | Hwah |
-| :--: | :--: |
+|       Dirz        |       Hwah       |
+| :---------------: | :--------------: |
+| [`groq`](./groq/) | Testing APIChatz |
