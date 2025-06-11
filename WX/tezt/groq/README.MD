@@ -10,4 +10,4 @@
 # Dirz SmellPussy
 
 Dirz | hwa
-[``]() | ss
+[`g1`](./g1/) | General Groq Testing Here
