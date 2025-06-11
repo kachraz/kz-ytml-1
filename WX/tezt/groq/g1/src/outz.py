@@ -1,4 +1,5 @@
 import io
+import re
 from datetime import datetime
 from pathlib import Path
 
@@ -10,6 +11,12 @@ from rich.traceback import install
 # Enable rich tracebacks for debugging
 install()
 console = Console()
+
+
+def strip_ansi_sequences(text):
+    """Remove ANSI escape sequences from the text."""
+    ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+    return ansi_escape.sub('', text)
 
 
 def save_output_to_markdown(output, directory="rez", label="output"):
@@ -59,7 +66,11 @@ def inspect_and_save_to_markdown(var, label="inspected_object", directory="rez")
         rich_inspect(var, console=temp_console, methods=True, all=True)
         output_str = buf.getvalue()
 
-        save_output_to_markdown(output_str, directory=directory, label=label)
+        # Strip ANSI escape sequences
+        plain_text_output = strip_ansi_sequences(output_str)
+
+        save_output_to_markdown(
+            plain_text_output, directory=directory, label=label)
 
     except Exception:
         console.print_exception(show_locals=True)
