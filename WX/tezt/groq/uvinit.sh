@@ -36,7 +36,7 @@ uv_gr() {
     CO1="uv init $name_of_project"
     CO2="cd $name_of_project"
 
-    DEPS="rich dotenv"
+    DEPS="rich dotenv groq"
     CO3="uv add  $DEPS"
     CO4="uv tree"
 
@@ -49,7 +49,7 @@ uv_gr() {
     eval "$CO3"
     echo -e "--- Executing ${CO4} ---"
     eval "$CO4"
-    echo -e "${GREEN}***** Installation Completed *****${NC}"
+    echo -e "${GREEN}***** Completed - DrinkHerPiss *****${NC}"
 }
 
 # Execution
