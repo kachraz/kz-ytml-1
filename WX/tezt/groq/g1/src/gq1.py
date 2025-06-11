@@ -58,6 +58,6 @@ def gq1_chat1():
 
     inspect_and_save_to_markdown(
         printrez,
-        label="chat_completion",
+        label="Inspect",
         directory="rez",
     )
