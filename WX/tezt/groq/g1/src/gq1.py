@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from groq import Groq
 from rich import print as rpr
 
-from .outz import save_output_to_markdown
+from .outz import inspect_and_save_to_image, save_output_to_markdown
 from .utz import header1
 
 # --- Global Pussy ---
@@ -56,7 +56,7 @@ def gq1_chat1():
     printrez = chat_completion.choices[0].message.content
     save_output_to_markdown(printrez, directory="rez", label="chat_response")
 
-    inspect_and_save_to_markdown(
+    inspect_and_save_to_image(
         printrez,
         label="Inspect",
         directory="rez",
