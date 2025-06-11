@@ -8,6 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from groq import Groq
+from rich import inspect as rich_inspect
 from rich import print as rpr
 
 from .outz import save_output_to_markdown
@@ -55,3 +56,5 @@ def gq1_chat1():
 
     printrez = chat_completion.choices[0].message.content
     save_output_to_markdown(printrez, directory="rez", label="chat_response")
+
+    rich_inspect(chat_completion, methods=True, all=True)
