@@ -7,14 +7,14 @@
       }
     },
     "exa": {
-      "command": "npx",
+      "command": "bunx",
       "args": [
         "-y",
         "@smithery/cli@latest",
         "run",
         "exa",
         "--key",
-        "Bearer ${env:EXA}"
+        "14f11b27-3815-4d86-9725-8ebc1451b21d"
       ]
     }
   }

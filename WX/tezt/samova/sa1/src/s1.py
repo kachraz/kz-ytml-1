@@ -4,11 +4,52 @@
 
 # --- Imports ---
 
+import os
+
+import httpx
+from dotenv import load_dotenv
+from rich import print as rpr
+from rich.pretty import pprint
+
 from .utz import header1
 
+# --- Load the envpussy --
+load_dotenv("src/.env")
+SA_T = os.getenv("SAO")
 
 # --- Main File Function ---
 
-def s1_file():
 
-    # === Sub Functions ===
+def s1_file():
+    # print_envz()
+    get_modelz()
+
+# === Sub Functions ===
+
+# Function to get the env file
+
+
+def print_envz():
+    header1("Get Env")
+    rpr(f"[green]SA_T: {SA_T}[/green]")
+
+# Test chat function 1 and examine outpout varibale
+
+
+def get_modelz():
+    header1("Quickstart Code from Docs")
+
+    # Define the API endpoint
+    url = "https://api.sambanova.ai/v1/models"
+
+    # Make a synchronous GET request
+    with httpx.Client() as client:
+        resp = client.get(url)
+
+        # Check if the request succeeded
+        if resp.status_code == 200:
+            model_names = [model["id"] for model in resp.json()["data"]]
+            pprint(model_names)  # Parse JSON resp
+        else:
+            rpr(f"Error: {resp.status_code}")
+            rpr(resp.text)  # Print raw response if error

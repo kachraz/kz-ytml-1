@@ -2,9 +2,18 @@
 # Main entrypoint for the sa1 module.
 # /////////////////////////////////////////////////////////////////////////////
 
-def main():
-    print("Hello from sa1!")
+# --- Imports ---
+
+from rich import print as rpr
+
+from src.s1 import s1_file
+
+
+# --- Funcz ---
+def buty():
+    s1_file()
 
 
 if __name__ == "__main__":
-    main()
+    buty()
+    rpr("[red]Sniffo... [/red]")
