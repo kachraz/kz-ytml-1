@@ -36,7 +36,7 @@ uv_gr() {
     CO1="uv init $name_of_project"
     CO2="cd $name_of_project"
 
-    DEPS="rich gradio[mcp] smolagents[toolkit] dotenv"
+    DEPS="rich openai dotenv"
     CO3="uv add  $DEPS"
     CO4="uv tree"
 
