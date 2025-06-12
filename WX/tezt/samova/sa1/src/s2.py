@@ -30,22 +30,21 @@ def s2_file():
 def lite1():
     header1("LiteLLM Example from SN docs")
 
-    os.environ['SAMBANOVA_API_KEY'] = "SA_T"
-    response = completion(
-        model="Meta-Llama-3.2-3B-Instruct",
-        messages=[
-            {
-                "role": "user",
-                "content": "What do you know about sambanova.ai",
-            }
-        ],
-        max_tokens=10,
-        response_format={"type": "json_object"},
-        stop=["\n\n"],
-        temperature=0.2,
-        top_p=0.9,
-        tool_choice="auto",
-        tools=[],
-        user="user",
-    )
-    print(response)
+    os.environ['SAMBANOVA_API_KEY'] = ""
+
+
+response = completion(
+    model="sambanova/Llama-4-Maverick-17B-128E-Instruct",
+    messages=[
+        {
+            "role": "user",
+            "content": "What do you know about SambaNova Systems",
+        }
+    ],
+    max_tokens=10,
+    stop=[],
+    temperature=0.2,
+    top_p=0.9,
+    user="user",
+)
+print(response)
