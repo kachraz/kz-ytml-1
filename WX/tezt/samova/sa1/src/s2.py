@@ -32,7 +32,7 @@ def s2_file():
 def lite1():
     header1("LiteLLM Example from SN docs")
 
-    os.environ['SAMBANOVA_API_KEY'] = ""
+    os.environ['SAMBANOVA_API_KEY'] = SA_T
 
     response = completion(
         model="sambanova/Meta-Llama-3.2-3B-Instruct",
