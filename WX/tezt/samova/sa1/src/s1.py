@@ -73,18 +73,12 @@ def test_model_output():
         api_key=SA_T,
     )
 
-    modelz = [
-        "Meta-Llama-3.2-3B-Instruct"
-    ]
-
-    promptz = [
-        {"role": "system", "content": "Answer the question as a drunk miedval knight."},
-        {"role": "user", "content": "Explain stage 4 wokeism cancer"}
-    ]
-
     completion = client.chat.completions.create(
-        model=[modelz[0]],
-        messages=promptz,
+        model="Meta-Llama-3.2-3B-Instruct",
+        messages=[
+            {"role": "system", "content": "Answer as a drunk miedeval knight."},
+            {"role": "user", "content": "Share a story about beautiful maidens bathing"}
+        ]
     )
 
     rpr(completion.choices[0].message.content)
