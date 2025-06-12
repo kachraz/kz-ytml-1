@@ -70,7 +70,7 @@ def test_model_output():
 
     client = OpenAI(
         base_url="https://api.sambanova.ai/v1",
-        api_key="<YOUR API KEY>"
+        api_key=SA_T,
     )
 
     modelz = [
