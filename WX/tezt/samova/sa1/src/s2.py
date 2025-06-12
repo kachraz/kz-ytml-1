@@ -23,4 +23,5 @@ def s2_file():
 
 # === Sub Functions ===
 
-# Function to get the env file
+# Litellm Example from docs
+#
