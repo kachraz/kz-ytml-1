@@ -42,15 +42,15 @@ def lite1():
                 "content": "What do you know about SambaNova Systems, answer like a gangster",
             }
         ],
-        max_tokens=10,
+        max_tokens=100,
         stop=[],
         temperature=0.2,
         top_p=0.9,
         user="user",
     )
-    print(response)
+    print(response.choices[0].message.content)
     save_to_markdown(
-        response,
+        response.choices[0].message.content,
         prefix="lite1",
         directory="rez"
     )
