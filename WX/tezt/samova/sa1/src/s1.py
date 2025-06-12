@@ -8,6 +8,7 @@ import os
 
 import httpx
 from dotenv import load_dotenv
+from openai import OpenAI
 from rich import print as rpr
 from rich.pretty import pprint
 
@@ -61,4 +62,22 @@ def get_modelz():
             rpr(resp.text)  # Print raw response if error
 
 
-# Testing model output , from smbanova the cheapest one is
+# Testing model output , from smbanova the cheapest one is Meta-Llama-3.2-3B-Instruct
+
+def test_model_output():
+    header1("Test Model Output - Cheapest one is Meta-Llama-3.2-3B-Instruct")
+
+    client = OpenAI(
+        base_url="https://api.sambanova.ai/v1",
+        api_key="<YOUR API KEY>"
+    )
+
+    completion = client.chat.completions.create(
+        model="Meta-Llama-3.1-405B-Instruct",
+        messages=[
+            {"role": "system", "content": "Answer the question in a couple sentences."},
+            {"role": "user", "content": "Share a happy story with me"}
+        ]
+    )
+
+    print(completion.choices[0].message.content)
