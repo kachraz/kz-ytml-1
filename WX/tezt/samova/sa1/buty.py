@@ -6,12 +6,12 @@
 
 from rich import print as rpr
 
-from src.s1 import s1_file
+from src.s2 import s2_file
 
 
 # --- Funcz ---
 def buty():
-    s1_file()
+    s2_file()
 
 
 if __name__ == "__main__":

@@ -8,6 +8,8 @@ import os
 
 from dotenv import load_dotenv
 
+from src.utz import header1
+
 # --- Load the envpussy --
 load_dotenv("src/.env")
 SA_T = os.getenv("SAO")
@@ -15,10 +17,10 @@ SA_T = os.getenv("SAO")
 # --- Main File Function ---
 
 
-def s1_file():
-    # print_envz()
-    # get_modelz()
+def s2_file():
+    header1("S2 File Function")
 
-    # === Sub Functions ===
 
-    # Function to get the env file
+# === Sub Functions ===
+
+# Function to get the env file
