@@ -24,4 +24,7 @@ def s2_file():
 # === Sub Functions ===
 
 # Litellm Example from docs
-#
+# https://docs.sambanova.ai/cloud/docs/integrations/litellm#litellm
+
+def lite1():
+    header1("LiteLLM Example from SN docs")
