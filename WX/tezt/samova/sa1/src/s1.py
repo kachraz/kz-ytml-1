@@ -34,7 +34,7 @@ def print_envz():
     header1("Get Env")
     rpr(f"[green]SA_T: {SA_T}[/green]")
 
-# Test chat function 1 and examine outpout varibale
+# Test chat function 1 get all models from the API
 
 
 def get_modelz():
@@ -59,3 +59,6 @@ def get_modelz():
         else:
             rpr(f"Error: {resp.status_code}")
             rpr(resp.text)  # Print raw response if error
+
+
+# Testing model output , from smbanova the cheapest one is
