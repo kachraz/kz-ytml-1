@@ -7,6 +7,7 @@
 
 # Dirz
 
-|       Dirz        |       Hwah       |
-| :---------------: | :--------------: |
-| [`groq`](./groq/) | Testing APIChatz |
+|          Dirz          |         Hwah         |
+| :--------------------: | :------------------: |
+|   [`groq`](./groq/)    | Testing Gorqina Chat |
+| [`samovaq`](./samova/) |  Testing SamovaChat  |
