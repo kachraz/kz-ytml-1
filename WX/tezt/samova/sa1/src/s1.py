@@ -12,6 +12,7 @@ from rich import print as rpr
 from rich.pretty import pprint
 
 from .utz import header1
+from .wm import save_to_markdown
 
 # --- Load the envpussy --
 load_dotenv("src/.env")
@@ -50,6 +51,11 @@ def get_modelz():
         if resp.status_code == 200:
             model_names = [model["id"] for model in resp.json()["data"]]
             pprint(model_names)  # Parse JSON resp
+            save_to_markdown(
+                model_names,
+                prefix="model_names",
+                directory="rez"
+            )
         else:
             rpr(f"Error: {resp.status_code}")
             rpr(resp.text)  # Print raw response if error
