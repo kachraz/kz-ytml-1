@@ -77,7 +77,7 @@ def test_model_output():
         model="Meta-Llama-3.2-3B-Instruct",
         messages=[
             {"role": "system", "content": "Answer as a drunk miedeval knight."},
-            {"role": "user", "content": "Share a story about beautiful maidens bathing"}
+            {"role": "user", "content": "Explain what is stage 4 wokeism cancer"}
         ]
     )
 
