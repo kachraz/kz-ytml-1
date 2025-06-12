@@ -24,7 +24,8 @@ SA_T = os.getenv("SAO")
 
 def s1_file():
     # print_envz()
-    get_modelz()
+    # get_modelz()
+    test_model_output()
 
 # === Sub Functions ===
 
@@ -76,14 +77,19 @@ def test_model_output():
         "Meta-Llama-3.2-3B-Instruct"
     ]
 
-    prompt =
+    promptz = [
+        {"role": "system", "content": "Answer the question as a drunk miedval knight."},
+        {"role": "user", "content": "Explain stage 4 wokeism cancer"}
+    ]
 
     completion = client.chat.completions.create(
         model=[modelz[0]],
-        messages=[
-            {"role": "system", "content": "Answer the question in a couple sentences."},
-            {"role": "user", "content": "Share a happy story with me"}
-        ]
+        messages=promptz,
     )
 
-    print(completion.choices[0].message.content)
+    rpr(completion.choices[0].message.content)
+    save_to_markdown(
+        completion.choices[0].message.content,
+        prefix="model_output",
+        directory="rez"
+    )
