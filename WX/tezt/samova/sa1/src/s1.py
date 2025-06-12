@@ -72,8 +72,14 @@ def test_model_output():
         api_key="<YOUR API KEY>"
     )
 
+    modelz = [
+        "Meta-Llama-3.2-3B-Instruct"
+    ]
+
+    prompt =
+
     completion = client.chat.completions.create(
-        model="Meta-Llama-3.1-405B-Instruct",
+        model=[modelz[0]],
         messages=[
             {"role": "system", "content": "Answer the question in a couple sentences."},
             {"role": "user", "content": "Share a happy story with me"}
