@@ -11,6 +11,8 @@ from litellm import completion
 
 from src.utz import header1
 
+from .wm import save_to_markdown
+
 # --- Load the envpussy --
 load_dotenv("src/.env")
 SA_T = os.getenv("SAO")
@@ -32,19 +34,23 @@ def lite1():
 
     os.environ['SAMBANOVA_API_KEY'] = ""
 
-
-response = completion(
-    model="sambanova/Llama-4-Maverick-17B-128E-Instruct",
-    messages=[
-        {
-            "role": "user",
-            "content": "What do you know about SambaNova Systems",
-        }
-    ],
-    max_tokens=10,
-    stop=[],
-    temperature=0.2,
-    top_p=0.9,
-    user="user",
-)
-print(response)
+    response = completion(
+        model="sambanova/Meta-Llama-3.2-3B-Instruct",
+        messages=[
+            {
+                "role": "user",
+                "content": "What do you know about SambaNova Systems, answer like a gangster",
+            }
+        ],
+        max_tokens=10,
+        stop=[],
+        temperature=0.2,
+        top_p=0.9,
+        user="user",
+    )
+    print(response)
+    save_to_markdown(
+        response,
+        prefix="lite1",
+        directory="rez"
+    )
