@@ -19,7 +19,7 @@ SA_T = os.getenv("SAO")
 
 
 def s2_file():
-    header1("S2 File Function")
+    lite1()
 
 
 # === Sub Functions ===
@@ -36,7 +36,7 @@ def lite1():
         messages=[
             {
                 "role": "user",
-                "content": "What do you know about sambanova.ai. Give your response in json format",
+                "content": "What do you know about sambanova.ai",
             }
         ],
         max_tokens=10,
