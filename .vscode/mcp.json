@@ -14,7 +14,7 @@
         "run",
         "exa",
         "--key",
-        "${env:EXA}"
+        "Bearer ${env:EXA}"
       ]
     }
   }
