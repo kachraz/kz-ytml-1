@@ -7,7 +7,8 @@
 
 # Dirz
 
-|         Dirz          |         Hwah         |
-| :-------------------: | :------------------: |
-|   [`groq`](./groq/)   | Testing Gorqina Chat |
-| [`samova`](./samova/) |  Testing SamovaChat  |
+|         Dirz          |     Hwah     |
+| :-------------------: | :----------: |
+|   [`groq`](./groq/)   | Gorqina Chat |
+| [`samova`](./samova/) |  SamovaChat  |
+|  [`gitml`](./gitml/)  | githubModels |
