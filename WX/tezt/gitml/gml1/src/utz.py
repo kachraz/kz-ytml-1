@@ -5,6 +5,7 @@ import logging
 from rich.console import Console  # For console.print
 from rich.logging import RichHandler
 from rich.panel import Panel  # For Panel()
+from rich.rule import Rule
 from rich.traceback import install
 
 console = Console()  # Standard code to access console
@@ -52,3 +53,13 @@ def l_error(text):
 
 def l_critical(text):
     log.critical(f"[white on red bold]{text}[/white on red bold]")
+
+
+def tline():
+    console.print(Rule(title="[green]Execution Section[/green]",
+                  characters="┉", style="bold green"))
+
+
+def eline():
+    console.print(Rule(title="[green] END[/green]",
+                  characters="┉", style="bold red"))
