@@ -137,7 +137,7 @@ def gm1_1():
     # Save to Markdown
     save_to_markdown(
         response.choices[0].message.content,
-        prefix="gm1_test",
+        prefix=model,
         directory="rez/",
         header_level=2,
         include_time_in_filename=True,
