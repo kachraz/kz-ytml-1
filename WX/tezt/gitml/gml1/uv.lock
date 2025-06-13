@@ -193,6 +193,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "dotenv" },
     { name = "gradio", extra = ["mcp"] },
+    { name = "httpx" },
     { name = "openai" },
     { name = "rich" },
 ]
@@ -201,6 +202,7 @@ dependencies = [
 requires-dist = [
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "gradio", extras = ["mcp"], specifier = ">=5.33.2" },
+    { name = "httpx", specifier = ">=0.28.1" },
     { name = "openai", specifier = ">=1.86.0" },
     { name = "rich", specifier = ">=14.0.0" },
 ]
