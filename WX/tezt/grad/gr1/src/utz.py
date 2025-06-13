@@ -1,6 +1,7 @@
 # Rich Prettifier Code
 # ------------------------------------------------------
 import logging
+import subprocess
 
 from rich.console import Console  # For console.print
 from rich.logging import RichHandler
@@ -63,3 +64,16 @@ def tline():
 def eline():
     console.print(Rule(title="[green] END[/green]",
                   characters="┉", style="bold red"))
+
+# Get image
+
+
+def get_ascii():
+
+    # Run the curl command
+    result = subprocess.run(["curl", "https://snips.sh/f/rYUPL-br5R"],
+                            capture_output=True, text=True)
+
+    # Print output
+    print("STDOUT:", result.stdout)
+    print("STDERR:", result.stderr)
