@@ -12,3 +12,4 @@
 |   [`groq`](./groq/)   | Gorqina Chat |
 | [`samova`](./samova/) |  SamovaChat  |
 |  [`gitml`](./gitml/)  | githubModels |
+|   [`grad`](./grad/)   |   gradioui   |
