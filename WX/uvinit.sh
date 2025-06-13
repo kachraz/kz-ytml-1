@@ -52,5 +52,13 @@ uv_gr() {
     echo -e "${GREEN}***** Installation Completed *****${NC}"
 }
 
+# Function remove all directories with .vent
+rm_venv_find() {
+    hea1 "Removing all directories with .venv"
+    co1="find . -type d -name '.venv' -exec rm -rf {} +"
+    echo -e "--- Executing ${co1} ---"
+    eval "${co1}"
+}
+
 # Execution
 uv_gr
