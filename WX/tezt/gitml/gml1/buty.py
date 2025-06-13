@@ -3,13 +3,13 @@
 # /////////////////////////////////////////////////////////////
 
 # --- Imports ---
-from src.gtm import get_models_1
+from src.gm1 import gm1_main
 from src.utz import eline, tline
 
 
 # --- Main Function ---
 def buty():
-    get_models_1()
+    gm1_main()
 
 
 if __name__ == "__main__":
