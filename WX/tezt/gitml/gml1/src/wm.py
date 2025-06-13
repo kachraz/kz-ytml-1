@@ -54,7 +54,7 @@ def save_to_markdown(
     header_section = ""
     if metadata:
         header_section = "\n".join(
-            [f"- **{key}:** {value}" for key, value in metadata.items()])
+            [f"- ##{key}: {value}" for key, value in metadata.items()])
 
     # Final content with header and metadata
     content_with_header = f"# Generated on {datetime_str}\n"
