@@ -39,10 +39,10 @@ def lite1():
         messages=[
             {
                 "role": "user",
-                "content": "What do you know about SambaNova Systems, answer like a gangster",
+                "content": "What does the term booty sniff dancing mean ?, answer like a gangster",
             }
         ],
-        max_tokens=100,
+        max_tokens=200,
         stop=[],
         temperature=0.2,
         top_p=0.9,
