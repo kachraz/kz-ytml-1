@@ -106,7 +106,7 @@ def gm1_1():
     header1("Official Example Test")
 
     endpoint = "https://models.github.ai/inference"
-    model = model_ids[23]
+    model = model_ids[36]
 
     client = OpenAI(
         base_url=endpoint,
