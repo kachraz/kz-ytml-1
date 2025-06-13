@@ -137,7 +137,7 @@ def gm1_1():
     # Save to Markdown
     save_to_markdown(
         response.choices[0].message.content,
-        prefix=model,
+        prefix="mistral-ai_codestral-2501",
         directory="rez/",
         header_level=2,
         include_time_in_filename=True,
