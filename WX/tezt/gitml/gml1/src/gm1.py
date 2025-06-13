@@ -106,7 +106,7 @@ def gm1_1():
     header1("Official Example Test")
 
     endpoint = "https://models.github.ai/inference"
-    model = model_ids[36]
+    model = model_ids[58]
 
     client = OpenAI(
         base_url=endpoint,
@@ -137,7 +137,7 @@ def gm1_1():
     # Save to Markdown
     save_to_markdown(
         response.choices[0].message.content,
-        prefix="mistral-ai_codestral-2501",
+        prefix="microsoft_phi-4-reasoning",
         directory="rez/",
         header_level=2,
         include_time_in_filename=True,
