@@ -1,3 +1,5 @@
+<img src="./kz/g.webp" width=3000>
+
 <h1 align="center"><code> kz-ytml-1 </code></h1>
 <h2 align="center"><i> YTMLSTUFFZ </i></h2>
 

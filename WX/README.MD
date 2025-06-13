@@ -8,3 +8,4 @@
 | :---------------: | :----------------: |
 | [`smol`](./smol/) | Smol Agent CW here |
 | [`tezt`](./tezt/) |   Various Tests    |
+|  [`gfx`](./gfx/)  |      Mak GFX       |
