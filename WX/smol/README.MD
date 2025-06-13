@@ -7,6 +7,6 @@
 
 # Diraz
 
-|       Dir       | What |
-| :-------------: | :--: |
-| [`sm1`](./sm1/) |
+|       Dir       |                                                                                           What                                                                                            |
+| :-------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [`sm1`](./sm1/) | Inital testing with smole agents, got stuck when trying to get the agents to work with Gradio, you were running out fast. So then went on to find better ways, Settled with using LiteLLM |
