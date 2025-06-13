@@ -7,10 +7,12 @@
 # -- Globsl Vars
 
 # --- Load the envpussy --
+import json
 import os
 
 import httpx
 from dotenv import load_dotenv
+from rich.pretty import pprint as ppr
 
 from .utz import header1
 from .wm import save_to_markdown
@@ -31,7 +33,7 @@ def get_models_1():
 
     header1("fetch GitHUb Models")
 
-    url = "https://api.github.com/catalog/models"
+    url = "https://models.github.ai/catalog/models"
 
     headers = {
         "Accept": "application/vnd.github+json",
@@ -44,12 +46,14 @@ def get_models_1():
     # Print status code and response JSON
     print(f"Status Code: {response.status_code}")
     try:
-        print(response.json())
+        ppr(response.json())
+        formatted_output = json.dumps(
+            response.json(), indent=2, ensure_ascii=False)
 
         # Write to markdown file
         save_to_markdown(
-            response.json(),
-            prefix="gm1_test",
+            content=f"```json\n{formatted_output}\n```",
+            prefix="gitmodelz",
             directory="rez/",
             header_level=2,
             include_time_in_filename=True,
