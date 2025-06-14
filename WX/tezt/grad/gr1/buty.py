@@ -4,13 +4,13 @@
 
 # --- Imports ---
 
-from src.g1 import g1_main
+from src.sam import sam_main
 from src.utz import eline, tline
 
 
 # --- Main Function ---
 def buty():
-    g1_main()
+    sam_main()
 
 
 if __name__ == "__main__":
