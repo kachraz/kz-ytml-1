@@ -4,8 +4,14 @@
 
 # --- Imports ---
 
+from src.utz import header1
+
 # --- Global Vars ---
 
 # --- Main Function ---
+
+
+def sam_main():
+    header1("Samova Chatbot Test")
 
 # --- Sub Functions ---
