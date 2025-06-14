@@ -27,7 +27,8 @@ c_th = themes[5]
 
 
 def g1_main():
-    g1_1()
+    # g1_1()
+    g1_2()
 
 
 # --- Sub Function ---
