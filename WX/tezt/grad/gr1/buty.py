@@ -4,7 +4,7 @@
 
 # --- Imports ---
 
-from src.utz import eline, get_ascii, header1, tline
+from src.utz import eline, header1, tline
 
 
 # --- Main Function ---
@@ -16,4 +16,3 @@ if __name__ == "__main__":
     tline()
     buty()
     eline()
-    get_ascii()
