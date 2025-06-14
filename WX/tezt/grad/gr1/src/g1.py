@@ -11,6 +11,18 @@ from .utz import header1
 
 # --- GLobal Vars ---
 
+# Choosing the themes
+themes = [
+    gr.themes.Ocean(),
+    gr.themes.Monochrome(),
+    gr.themes.Citrus(),
+    gr.themes.Glass(),
+    gr.themes.Default(),
+    gr.themes.Soft()
+]
+c_th = themes[5]
+
+
 # --- Main Function ---
 
 
@@ -28,7 +40,9 @@ def g1_1():
         gr.Markdown(in_txt)
 
     # Main Interface
-    with gr.Blocks() as g1_ui:
+    with gr.Blocks(
+        theme=c_th
+    ) as g1_ui:
 
         with gr.Tab("Gradio Test 1.1"):
             intro_section()
