@@ -24,13 +24,15 @@ themes = [
 c_th = themes[5]
 
 czz = """ 
-.gradio-container {
-background: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJ4b21tZ3hxdmQwYzVuejU1cnZ3dXZkc3hwYnJwdDhmcjlxbWY1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7b8jdNUoFBdcoILjjv/giphy.gif)
+.gradio-container {background: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJ4b21tZ3hxdmQwYzVuejU1cnZ3dXZkc3hwYnJwdDhmcjlxbWY1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7b8jdNUoFBdcoILjjv/giphy.gif)} 
+.gradio-container {} 
+
+
+background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJ4b21tZ3hxdmQwYzVuejU1cnZ3dXZkc3hwYnJwdDhmcjlxbWY1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7b8jdNUoFBdcoILjjv/giphy.gif); 
   background-attachment: fixed;  /* Makes it fixed (non-scrolling) */
   background-repeat: no-repeat;   /* Prevents repeating */
   background-size: cover;         /* Optional: covers full container */
   background-position: center;    /* Centers the image nicely */
-} 
 """
 
 # -- Sub Functions ---
