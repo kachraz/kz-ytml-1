@@ -6,7 +6,7 @@
 
 import gradio as gr
 
-from .mkd import in_txt
+from .mkd import in_txt, in_txt2
 from .utz import header1
 
 # --- GLobal Vars ---
@@ -60,3 +60,16 @@ def g1_2():
 
     # Intro tab
     def intro_section():
+        gr.Markdown(in_txt2)
+
+    # Main UI
+    with gr.Blocks(
+        theme=c_th
+    ) as g1_ui:
+
+        with gr.Tab("Gradio Test 1.2"):
+            intro_section()
+
+    g1_ui.launch(
+        show_error=True,
+    )
