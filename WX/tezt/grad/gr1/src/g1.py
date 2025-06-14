@@ -75,6 +75,8 @@ def g1_2():
 
         gr.ChatInterface(
             slow_echo,
+            title="Booty Sniffing Chat Interface",
+            description="Chat with SmellPanty",
             type="messages",
             flagging_mode="manual",
             flagging_options=["Good", "Bad", "Shit"],
