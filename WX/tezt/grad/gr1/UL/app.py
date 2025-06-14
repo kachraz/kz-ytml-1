@@ -8,7 +8,12 @@ import time
 
 import gradio as gr
 
+from src.mkd import txt2
+
 # --- Vars ---
+
+# Theme choser
+
 
 # -- Sub Functions ---
 
@@ -16,11 +21,17 @@ import gradio as gr
 
 
 def ch_in():
+
+    # Chat interface Function Call
     def slow_echo(message, history):
         for i in range(len(message)):
             time.sleep(0.05)
             yield "SmellPanty: " + message[:i + 1]
-    gr.Markdown("Hello")
+
+    # Chat Interface Description
+    gr.Markdown(txt2)
+
+    # Building chat interface
     gr.ChatInterface(
         slow_echo,
         type="messages",
