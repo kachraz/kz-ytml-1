@@ -8,7 +8,7 @@ import time
 
 import gradio as gr
 
-from .mkd import in_txt, in_txt2
+from .mkd import in_txt, in_txt2, txt2
 from .utz import header1
 
 # --- GLobal Vars ---
@@ -95,6 +95,7 @@ def g1_2():
             intro_section()
 
         with gr.Tab("Demo Chat Interaface Example"):
+            gr.Markdown(txt2)
             ch_in()
 
     g1_ui.launch(
