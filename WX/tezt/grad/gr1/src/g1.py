@@ -78,7 +78,7 @@ def g1_2():
             title="Booty Sniffing Chat Interface",
             description="Chat with SmellPanty",
             textbox=gr.Textbox(
-                placeholder="SmellPanty: "
+                placeholder="Bastard write something useful here !!! 🦧🦧🦧",
             ),
             type="messages",
             flagging_mode="manual",
