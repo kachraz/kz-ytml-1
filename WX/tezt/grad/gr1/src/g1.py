@@ -122,10 +122,10 @@ def g1_3():
         theme=c_th
     ) as g3_ui:
 
-        with gr.Tab():
-            gr.Markdown("Simple Input output test")
+        with gr.Tab("Intro Text"):
+            gr.Markdown("#Simple Input output test")
 
-        with gr.Tab():
+        with gr.Tab("Actual Functions"):
             inp = gr.Textbox(
                 placeholder="Fuck OFf bastard"
             )
