@@ -20,6 +20,7 @@ def ch_in():
         for i in range(len(message)):
             time.sleep(0.05)
             yield "SmellPanty: " + message[:i + 1]
+    gr.Markdown("Hello")
     gr.ChatInterface(
         slow_echo,
         type="messages",
@@ -38,7 +39,14 @@ def ch_in():
 
 
 def main():
-    pass
+    with gr.Blocks() as panty:
+
+        with gr.Tab("Panty"):
+            ch_in()
+
+    panty.launch(
+        show_error=True
+    )
 
 
 if __name__ == "__main__":
