@@ -13,7 +13,15 @@ from src.mkd import in_txt2, txt2
 # --- Vars ---
 
 # Theme choser
-
+themes = [
+    gr.themes.Ocean(),
+    gr.themes.Monochrome(),
+    gr.themes.Citrus(),
+    gr.themes.Glass(),
+    gr.themes.Default(),
+    gr.themes.Soft()
+]
+c_th = themes[5]
 
 # -- Sub Functions ---
 
@@ -50,7 +58,9 @@ def ch_in():
 
 
 def main():
-    with gr.Blocks() as panty:
+    with gr.Blocks(
+        theme=c_th
+    ) as panty:
 
         with gr.Tab("Home"):
             gr.Markdown(in_txt2)
