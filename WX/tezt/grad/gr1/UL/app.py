@@ -8,7 +8,7 @@ import time
 
 import gradio as gr
 
-from src.mkd import txt2
+from src.mkd import in_txt2, txt2
 
 # --- Vars ---
 
@@ -52,7 +52,10 @@ def ch_in():
 def main():
     with gr.Blocks() as panty:
 
-        with gr.Tab("Panty"):
+        with gr.Tab("Home"):
+            gr.Markdown(in_txt2)
+
+        with gr.Tab("ChatPanty"):
             ch_in()
 
     panty.launch(
