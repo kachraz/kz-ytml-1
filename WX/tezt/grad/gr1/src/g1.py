@@ -130,7 +130,8 @@ def g1_3():
                 placeholder="Fuck OFf bastard"
             )
             out = gr.Textbox()
-            inp.change(welcome, inp, out)
+            rape_btn = gr.Button("Rape")
+            rape_btn.click(welcome, inputs=inp, outputs=out)
 
     g3_ui.launch(
         show_error=True
