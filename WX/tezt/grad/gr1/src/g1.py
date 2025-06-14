@@ -71,7 +71,7 @@ def g1_2():
         def slow_echo(message, history):
             for i in range(len(message)):
                 time.sleep(0.05)
-                yield "SmellPanty: " + message[i]
+                yield "SmellPanty: " + message[:i + 1]
 
         gr.ChatInterface(
             slow_echo,
