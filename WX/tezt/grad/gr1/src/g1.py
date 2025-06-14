@@ -116,3 +116,22 @@ def g1_3():
 
     def welcome(name):
         return f"u typed {name}"
+
+    # Main ui
+    with gr.Blocks(
+        theme=c_th
+    ) as g3_ui:
+
+        with gr.Tab():
+            gr.Markdown("Simple Input output test")
+
+        with gr.Tab():
+            inp = gr.Textbox(
+                placeholder="Fuck OFf bastard"
+            )
+            out = gr.Textbox()
+            inp.change(welcome, inp, out)
+
+    g3_ui.launch(
+        show_error=True
+    )
