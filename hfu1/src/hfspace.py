@@ -8,6 +8,7 @@ from huggingface_hub import (
     delete_repo,
     upload_folder,
 )
+
 from src.utz import header1, header2
 
 # Loading the env file
@@ -15,7 +16,7 @@ load_dotenv("src/.env")
 hf_token = os.getenv("HF")
 
 # Main Repo ID here
-REPO_ID = "Wornu/privid"
+REPO_ID = "Chooth/p1c"
 
 
 #  ███████╗ ██╗   ██╗ ███╗   ██╗  ██████╗
