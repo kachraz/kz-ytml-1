@@ -117,9 +117,12 @@ def g1_3():
     def welcome(name):
         return f"u typed {name}"
 
+    czz = " .gradio-container {background: url(https://i.giphy.com/U3qYN8S0j3bpK.webp)} "
+
     # Main ui
     with gr.Blocks(
-        theme=c_th
+        theme=c_th,
+        css=czz
     ) as g3_ui:
 
         with gr.Tab("Intro Text"):
@@ -127,7 +130,8 @@ def g1_3():
 
         with gr.Tab("Actual Functions"):
             inp = gr.Textbox(
-                placeholder="Fuck OFf bastard"
+                placeholder="Fuck OFf bastard",
+                type="password"
             )
             out = gr.Textbox()
             rape_btn = gr.Button("Rape")

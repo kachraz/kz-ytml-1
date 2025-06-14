@@ -23,6 +23,10 @@ themes = [
 ]
 c_th = themes[5]
 
+czz = """ 
+.gradio-container {background: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJ4b21tZ3hxdmQwYzVuejU1cnZ3dXZkc3hwYnJwdDhmcjlxbWY1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7b8jdNUoFBdcoILjjv/giphy.gif)} 
+"""
+
 # -- Sub Functions ---
 
 # Chat Interface function
@@ -59,7 +63,8 @@ def ch_in():
 
 def panty():
     with gr.Blocks(
-        theme=c_th
+        theme=c_th,
+        css=czz
     ) as panty:
 
         with gr.Tab("Home"):
