@@ -78,12 +78,12 @@ def g1_2():
             type="messages",
             flagging_mode="manual",
             flagging_options=["Good", "Bad", "Shit"],
-            save_history=True,
             examples=[
                 ["Hi", "Hello"],
                 ["How are you?", "Good"],
                 ["What's your name?", "My name is SmellPanty"],
             ],
+            save_history=True,
         )
 
     # Main UI
