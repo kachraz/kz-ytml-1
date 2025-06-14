@@ -138,8 +138,8 @@ def hf_upload_dirz():
             ".python-version",
         ],  # Ignore these patterns
         repo_type="space",  # Change to "dataset" or "space" if needed
-        commit_message="SmellPantySpace",
-        commit_description="SpaceUploadPantyAddiuct",
+        commit_message="SmellPussy",
+        commit_description="WomanAssSmellerz",
         create_pr=False,  # Set to True if you want to create a PR instead
     )
 
