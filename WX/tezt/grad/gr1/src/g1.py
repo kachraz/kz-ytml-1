@@ -4,6 +4,8 @@
 
 # --- Imports ---
 
+import time
+
 import gradio as gr
 
 from .mkd import in_txt, in_txt2
@@ -63,6 +65,27 @@ def g1_2():
     def intro_section():
         gr.Markdown(in_txt2)
 
+    # Chat Interface function
+    def ch_in():
+
+        def slow_echo(message, history):
+            for i in range(len(message)):
+                time.sleep(0.05)
+                yield "SmellPanty: " + message[i]
+
+        gr.ChatInterface(
+            slow_echo,
+            type="messages",
+            flagging_mode="manual",
+            flagging_options=["Good", "Bad", "Shit"],
+            save_history=True,
+            examples=[
+                ["Hi", "Hello"],
+                ["How are you?", "Good"],
+                ["What's your name?", "My name is SmellPanty"],
+            ],
+        )
+
     # Main UI
     with gr.Blocks(
         theme=c_th
@@ -70,6 +93,9 @@ def g1_2():
 
         with gr.Tab("Gradio Test 1.2"):
             intro_section()
+
+        with gr.Tab("Demo Chat Interaface Example"):
+            ch_in()
 
     g1_ui.launch(
         show_error=True,
