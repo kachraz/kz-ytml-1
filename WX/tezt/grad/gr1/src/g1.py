@@ -69,9 +69,11 @@ def g1_2():
     def ch_in():
 
         def slow_echo(message, history):
-            for i in range(len(message)):
-                time.sleep(0.05)
-                yield "SmellPanty: " + message[:i + 1]
+    full_reply = ""
+    for i in range(len(message)):
+        time.sleep(0.05)
+        full_reply = "SmellPanty: " + message[:i + 1]
+        yield history + [(message, full_reply)]
 
         gr.ChatInterface(
             slow_echo,
