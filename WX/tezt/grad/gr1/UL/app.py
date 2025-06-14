@@ -57,7 +57,7 @@ def ch_in():
 # --- Main Function ---
 
 
-def main():
+def panty():
     with gr.Blocks(
         theme=c_th
     ) as panty:
@@ -74,5 +74,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    panty()
     print("BootySmells")
