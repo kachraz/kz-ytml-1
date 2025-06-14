@@ -32,6 +32,7 @@ def g1_main():
 
 # --- Sub Function ---
 
+# General tab testing here
 def g1_1():
     header1("Gradio Test 1.1")
 
@@ -50,3 +51,12 @@ def g1_1():
     g1_ui.launch(
         show_error=True,
     )
+
+# Tsting out the chat interfac tests here
+
+
+def g1_2():
+    header1("Gradio Test - Chat Interface Testing")
+
+    # Intro tab
+    def intro_section():
