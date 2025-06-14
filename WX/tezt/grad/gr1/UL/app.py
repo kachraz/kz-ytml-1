@@ -8,6 +8,8 @@ import time
 
 import gradio as gr
 
+from src.mkd import in_txt2
+
 # --- Vars ---
 
 # -- Sub Functions ---
