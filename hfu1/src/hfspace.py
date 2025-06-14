@@ -112,7 +112,7 @@ def hf_upload_dirz():
     """
 
     # Folder to upload
-    local_folder_path = "../WX/mywo/vg1/UL/"  # Path to your local folder
+    local_folder_path = "../WX/tezt/grad/gr1/UL/"  # Path to your local folder
     # Upload to repo root (change to subdir like "folder/" if needed)
     path_in_repo = ""
 
