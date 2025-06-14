@@ -77,6 +77,9 @@ def g1_2():
             slow_echo,
             title="Booty Sniffing Chat Interface",
             description="Chat with SmellPanty",
+            textbox=gr.Textbox(
+                placeholder="SmellPanty: "
+            ),
             type="messages",
             flagging_mode="manual",
             flagging_options=["Good", "Bad", "Shit"],
