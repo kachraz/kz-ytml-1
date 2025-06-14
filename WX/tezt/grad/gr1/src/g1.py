@@ -113,3 +113,6 @@ def g1_2():
 
 def g1_3():
     header1("Gradio Test 1.3")
+
+    def welcome(name):
+        return f"u typed {name}"
