@@ -30,7 +30,8 @@ c_th = themes[5]
 
 def g1_main():
     # g1_1()
-    g1_2()
+    # g1_2()
+    g1_3()
 
 
 # --- Sub Function ---
@@ -106,3 +107,9 @@ def g1_2():
     g1_ui.launch(
         show_error=True,
     )
+
+# Testing basic I/O
+
+
+def g1_3():
+    header1("Gradio Test 1.3")
