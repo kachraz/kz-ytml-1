@@ -120,7 +120,14 @@ def sam_chat2():
         panty = gr.ChatInterface(
             predict,
             title="Samova Chatbot",
-            chatbot=gr.Chatbot(height=800),
+            chatbot=gr.Chatbot(height=700),
+            textbox=gr.Textbox(
+                placeholder="Bastard write something useful here !!! 🦧🦧🦧"),
+            examples=[
+                "Describe booty dancing",
+                "Write rust script for testing API",
+                "What is idiomatic panty"
+            ],
             description="Chat with Samova",
             type="messages",
             flagging_mode="manual",
