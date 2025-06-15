@@ -127,6 +127,7 @@ def sam_chat2():
 
     with gr.Blocks(
         theme=c_th,
+        fill_height=True
     ) as pty:
 
         with gr.Tab("Intro Tab"):
