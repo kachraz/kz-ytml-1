@@ -120,6 +120,7 @@ def sam_chat2():
         panty = gr.ChatInterface(
             predict,
             title="Samova Chatbot",
+            chatbot=gr.Chatbot(height=800),
             description="Chat with Samova",
             type="messages",
             flagging_mode="manual",
