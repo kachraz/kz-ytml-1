@@ -11,11 +11,10 @@ from rich.pretty import pprint as ppr
 
 from .utz import header1
 
-# --- Vars ---
 # --- Global Vars ---
 load_dotenv("src/.ass")
 NB_T = os.getenv("NBY")
-SA_T = os.getenv("SA")
+SA_T = os.getenv("SAO")
 
 # --- mainFunc ---
 
@@ -30,3 +29,4 @@ def s1_main():
 def brint_env():
     header1("BrintaEnv")
     ppr(NB_T)
+    ppr(SA_T)
