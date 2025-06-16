@@ -9,6 +9,7 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from rich import print as rpr
+from rich.pretty import pprint as ppr
 
 from .utz import header1
 
