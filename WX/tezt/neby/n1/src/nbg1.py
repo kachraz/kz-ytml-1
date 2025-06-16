@@ -6,6 +6,7 @@
 
 import os
 
+import gradio as gr
 from dotenv import load_dotenv
 from rich import print as rpr
 
@@ -19,6 +20,21 @@ modelz = [
     "meta-llama/Meta-Llama-3.1-8B-Instruct",
     "Qwen/Qwen2.5-Coder-7B"
 ]
+
+themes = [
+    gr.themes.Ocean(),
+    gr.themes.Monochrome(),
+    gr.themes.Citrus(),
+    gr.themes.Glass(),
+    gr.themes.Default(),
+    gr.themes.Soft()
+]
+c_th = themes[5]
+
+# Styling Css
+czz = """ 
+.gradio-container {background: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJ4b21tZ3hxdmQwYzVuejU1cnZ3dXZkc3hwYnJwdDhmcjlxbWY1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7b8jdNUoFBdcoILjjv/giphy.gif); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center;} 
+"""
 
 # --- Main Function ---
 
