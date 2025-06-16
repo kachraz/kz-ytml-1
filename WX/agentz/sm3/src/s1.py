@@ -16,6 +16,9 @@ load_dotenv("src/.ass")
 NB_T = os.getenv("NBY")
 SA_T = os.getenv("SAO")
 
+env_list = [NB_T, SA_T]
+
+
 # --- mainFunc ---
 
 
@@ -28,5 +31,4 @@ def s1_main():
 # BrintaEnv
 def brint_env():
     header1("BrintaEnv")
-    ppr(NB_T)
-    ppr(SA_T)
+    ppr(env_list, expand_all=True)
