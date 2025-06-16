@@ -42,10 +42,18 @@ def nb_test1():
         api_key=NB_T
     )
 
+    modelz = [
+        "Meta-Lama-3.1-8B-Instruct",
+        "Qwen2.5-Coder-7B"
+    ]
+
     completion = client.chat.completions.create(
-        model="Meta-Llama-3.2-1B-Instruct",
+        model=modelz[0],
         messages=[
-            {"role": "user", "content": "Describe booty dancing"}
+            {
+                "role": "user",
+                "content": "Describe booty dancing"
+            }
         ],
         temperature=0.5
     )
