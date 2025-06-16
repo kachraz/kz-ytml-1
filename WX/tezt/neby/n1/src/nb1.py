@@ -39,7 +39,7 @@ def nb_test1():
     header1("NB1 Tezt")
 
     client = OpenAI(
-        base_url="https://api.sambanova.ai/v1",
+        base_url="https://api.studio.nebius.com/v1",
         api_key=NB_T
     )
 
@@ -59,4 +59,4 @@ def nb_test1():
         temperature=0.5
     )
 
-    ppr(completion.to_json)
+    ppr(completion.to_json, expand_all=True)
