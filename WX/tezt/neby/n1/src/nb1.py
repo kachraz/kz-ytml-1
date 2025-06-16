@@ -7,7 +7,7 @@
 import os
 
 from dotenv import load_dotenv
-from rich import print
+from rich import print as rpr
 
 from .utz import header1
 
@@ -25,4 +25,4 @@ def nb1_main():
 
 def brint_env():
     header1("Ass Stuff")
-    print(NB_T)
+    rpr(NB_T)
