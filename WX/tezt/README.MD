@@ -13,3 +13,4 @@
 | [`samova`](./samova/) |  SamovaChat  |
 |  [`gitml`](./gitml/)  | githubModels |
 |   [`grad`](./grad/)   |   gradioui   |
+|   [`neby`](./neby/)   |   NebyTest   |
