@@ -5,17 +5,24 @@
 # --- Imports Zone ---
 
 import os
+
 from dotenv import load_dotenv
 from rich import print
+
 from .utz import header1
 
 # --- Global Vars ---
 load_dotenv("src/.ass")
-SA_T = os.getenv("SAO")
+NB_T = os.getenv("NBY")
 
 # --- Main Function ---
 
 
 def nb1_main():
+    brint_env()
+# --- Sun functions ---
 
-    # --- Sun functions ---
+
+def brint_env():
+    header1("Ass Stuff")
+    print(NB_T)

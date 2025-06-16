@@ -4,12 +4,13 @@
 
 # --- Imports ---
 
-from src.utz import eline, header1, tline
+from src.nb1 import nb1_main
+from src.utz import eline, tline
 
 
 # --- Main Function ---
 def buty():
-    header1("Buty Test 1")
+    nb1_main()
 
 
 if __name__ == "__main__":
