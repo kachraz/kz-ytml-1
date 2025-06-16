@@ -24,7 +24,13 @@ def nb1_main():
 
 # --- Sub functions ---
 
-
+# Printaz Envuiaza
 def brint_env():
     header1("Ass Stuff")
     rpr(NB_T)
+
+# API Tezta
+
+
+def nb_test1():
+    header1("NB1 Tezt")
