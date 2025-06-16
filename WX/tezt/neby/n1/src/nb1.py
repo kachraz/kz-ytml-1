@@ -44,8 +44,8 @@ def nb_test1():
     )
 
     modelz = [
-        "Meta-Lama-3.1-8B-Instruct",
-        "Qwen2.5-Coder-7B"
+        "meta-llama/Meta-Lama-3.1-8B-Instruct",
+        "Qwen/Qwen2.5-Coder-7B"
     ]
 
     completion = client.chat.completions.create(
