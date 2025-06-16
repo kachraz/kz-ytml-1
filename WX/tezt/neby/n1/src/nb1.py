@@ -44,7 +44,7 @@ def nb_test1():
     )
 
     modelz = [
-        "meta-llama/Meta-Lama-3.1-8B-Instruct",
+        "meta-llama/Meta-Llama-3.1-8B-Instruct",
         "Qwen/Qwen2.5-Coder-7B"
     ]
 
