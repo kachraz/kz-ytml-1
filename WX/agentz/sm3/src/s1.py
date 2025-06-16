@@ -40,7 +40,9 @@ def brint_env():
 def hf1():
     header1("HF Main Example1")
 
-    model = InferenceClientModel()
+    model = InferenceClientModel(
+
+    )
     agent = CodeAgent(
         tools=[],
         model=model,
