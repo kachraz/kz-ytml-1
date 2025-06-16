@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich.pretty import pprint as ppr
-from smolagents import CodeAgent, InferenceClientModel
+from smolagents import CodeAgent, InferenceClientModel, LiteLLModel
 
 from .utz import header1
 
@@ -52,3 +52,20 @@ def hf1():
     ppr(result)
 
 # Execute smolgens with litellm
+
+
+def hf2():
+    header1("HF LiteLLM Example")
+
+    model = LiteLLModel(
+        modelid="",
+        apikey=SA_T,
+    )
+
+    agent = CodeAgent(
+        tools=[],
+        model=model,
+        add_base_tools=True
+    )
+
+    agent.run("What is BootyDance? and BootyCandy?")
