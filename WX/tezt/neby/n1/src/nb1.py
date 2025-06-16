@@ -116,3 +116,16 @@ def nb_hf_1():
     )
 
     ppr(comp.choices[0].message.content, expand_all=True)
+
+    save_to_markdown(
+        comp.choices[0].message.content,
+        prefix="HF_LAMA",
+        directory="rez/",
+        header_level=2,
+        include_time_in_filename=True,
+        metadata={
+            "Model": modelz[1],
+            "Endpoint": "huggingface_hub_inferenceClient",
+            "Question": quez
+        }
+    )
