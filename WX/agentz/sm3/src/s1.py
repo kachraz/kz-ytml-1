@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich.pretty import pprint as ppr
-from smolagents import CodeAgent, InferenceClientModel, LiteLLMModel
+from smolagents import CodeAgent, InferenceClientModel, LiteLLMModel, LiteLLMRouterModel
 
 from .utz import header1
 
@@ -149,3 +149,24 @@ def hf4():
 
 def hf5_llm_ro():
     header1("HF LiteLLM Router")
+
+    messages = [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "nWhat is BootyDance? and BootyCandy?"
+                }
+            ]
+        }
+    ]
+
+    model = LiteLLMRouterModel(
+        model_id="Meta-Llama-3.2-3B-Instruct",
+        model_list=[
+            {
+                "model_name": "Meta-Llama-3.2-3B-Instruct"
+            }
+        ]
+    )
