@@ -27,7 +27,9 @@ env_list = [NB_T, SA_T]
 def s1_main():
     # hf1()
     # hf2()
-    hf3()
+    # hf3()
+    # hf4()
+    hf5_llm_ro()
 
 
 # --- SubFunc ---
@@ -112,3 +114,38 @@ def hf3():
 
     # agent.run(messages)
     ppr(model(messages))
+
+# ////////////////////////////////////  Normal API Call Testing //////////////////////
+
+
+def hf4():
+
+    # Set your SambaNova credentials
+    os.environ["SAMBA_NOVA_API_KEY"] = SA_T
+
+    # Wrap SambaNova model with LiteLLMModel
+    model = LiteLLMModel(
+        model_id="sambanova/Meta-Llama-3.2-3B-Instruct",
+        api_base="https://api.sambanova.ai/v1",
+        api_key=os.getenv("SAMBA_NOVA_API_KEY"),
+        temperature=0.7,
+        max_tokens=512
+    )
+
+    # Create a code-based agent
+    agent = CodeAgent(
+        tools=[],  # optionally add tools here
+        model=model,
+        stream_outputs=False
+    )
+
+    # Run the agent
+    result = agent.run(
+        "Explain the difference between BootyDance and BootyCandy.")
+    print(result)
+
+# Using the Litellm Router
+
+
+def hf5_llm_ro():
+    header1("HF LiteLLM Router")
