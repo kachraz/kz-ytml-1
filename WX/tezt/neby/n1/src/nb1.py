@@ -21,7 +21,8 @@ NB_T = os.getenv("NBY")
 
 
 def nb1_main():
-    brint_env()
+    # brint_env()
+    nb_test1()
 
 
 # --- Sub functions ---
@@ -48,7 +49,7 @@ def nb_test1():
     ]
 
     completion = client.chat.completions.create(
-        model=modelz[0],
+        model=modelz[1],
         messages=[
             {
                 "role": "user",
