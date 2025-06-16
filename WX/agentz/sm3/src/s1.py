@@ -50,3 +50,5 @@ def hf1():
 
     result = agent.run("What is BootyDance?")
     ppr(result)
+
+# Execute smolgens with litellm
