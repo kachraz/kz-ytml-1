@@ -48,3 +48,5 @@ def nb_test1():
         ],
         temperature=0.5
     )
+
+    ppr(completion.to_json)
