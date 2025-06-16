@@ -8,7 +8,6 @@ import os
 
 from dotenv import load_dotenv
 from litellm import completion
-
 from src.utz import header1
 
 from .wm import save_to_markdown

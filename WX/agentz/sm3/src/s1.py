@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich.pretty import pprint as ppr
-from smolagents import CodeAgent, InferenceClientModel, LiteLLModel
+from smolagents import CodeAgent, InferenceClientModel, LiteLLMModel
 
 from .utz import header1
 
@@ -16,6 +16,7 @@ from .utz import header1
 load_dotenv("src/.ass")
 NB_T = os.getenv("NBY")
 SA_T = os.getenv("SAO")
+os.environ['SAMBANOVA_API_KEY'] = SA_T
 
 env_list = [NB_T, SA_T]
 
@@ -24,7 +25,9 @@ env_list = [NB_T, SA_T]
 
 
 def s1_main():
-    hf1()
+    # hf1()
+    # hf2()
+    hf3()
 
 
 # --- SubFunc ---
@@ -57,15 +60,55 @@ def hf1():
 def hf2():
     header1("HF LiteLLM Example")
 
-    model = LiteLLModel(
-        modelid="",
+    modelz = [
+        "sambanova/Meta-Llama-3.2-3B-Instruct"
+    ]
+
+    model = LiteLLMModel(
+        modelid=modelz[0],
+        api_base="https://api.sambanova.ai/v1",
         apikey=SA_T,
+        temperature=0.6,
+        max_tokens=1000,
     )
 
     agent = CodeAgent(
-        tools=[],
         model=model,
+        tools=[],
         add_base_tools=True
     )
 
     agent.run("What is BootyDance? and BootyCandy?")
+
+
+def hf3():
+    header1("HF LiteLLm Direct Example")
+
+    messages = [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "nWhat is BootyDance? and BootyCandy?"
+                }
+            ]
+        }
+    ]
+
+    model = LiteLLMModel(
+        modelid="sambanova/Meta-Llama-3.2-3B-Instruct",
+        api_base="https://api.sambanova.ai/v1",
+        apikey=SA_T,
+        temperature=0.6,
+        max_tokens=1000
+    )
+
+    # agent = CodeAgent(
+    #     model=model,
+    #     tools=[],
+    #     add_base_tools=True
+    # )
+
+    # agent.run(messages)
+    ppr(model(messages))

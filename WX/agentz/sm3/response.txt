@@ -1,0 +1,93 @@
+[H[2J[3J[0;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[0;35mExecute UV [0m
+[0;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[0;32m Executing... 
+ uv run buty.py [0m
+┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉ Execution Section ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
+╭─────────── <: ────────────╮
+│ HF LiteLLm Direct Example │
+╰─────────── :> ────────────╯
+[13:22:31] DEBUG    Using AiohttpTransport...                                                                             http_handler.py:533
+           DEBUG    Creating AiohttpTransport...                                                                          http_handler.py:557
+           DEBUG    connect_tcp.started host='raw.githubusercontent.com' port=443 local_address=None timeout=5                   _trace.py:47
+                    socket_options=None                                                                                                      
+           DEBUG    connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x77a968c401a0>              _trace.py:47
+           DEBUG    start_tls.started ssl_context=<ssl.SSLContext object at 0x77a968d8fd10>                                      _trace.py:47
+                    server_hostname='raw.githubusercontent.com' timeout=5                                                                    
+           DEBUG    start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x77a9690ae490>                _trace.py:47
+           DEBUG    send_request_headers.started request=<Request >                                                              _trace.py:47
+           DEBUG    send_request_headers.complete                                                                                _trace.py:47
+           DEBUG    send_request_body.started request=<Request >                                                                 _trace.py:47
+           DEBUG    send_request_body.complete                                                                                   _trace.py:47
+           DEBUG    receive_response_headers.started request=<Request >                                                          _trace.py:47
+           DEBUG    receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Connection', b'keep-alive'),    _trace.py:47
+                    (b'Content-Length', b'25340'), (b'Cache-Control', b'max-age=300'), (b'Content-Security-Policy',                          
+                    b"default-src 'none'; style-src 'unsafe-inline'; sandbox"), (b'Content-Type', b'text/plain; charset=utf-8'),             
+                    (b'ETag', b'W/"3e18887c0956644fb373fbc1ec52078fba21f63a3802eeaf1ab6364abbd40314"'),                                      
+                    (b'Strict-Transport-Security', b'max-age=31536000'), (b'X-Content-Type-Options', b'nosniff'),                            
+                    (b'X-Frame-Options', b'deny'), (b'X-XSS-Protection', b'1; mode=block'), (b'X-GitHub-Request-Id',                         
+                    b'E0A3:110342:2A15620:2EEBD3A:684E0C2D'), (b'Content-Encoding', b'gzip'), (b'Accept-Ranges', b'bytes'),                  
+                    (b'Date', b'Mon, 16 Jun 2025 13:22:31 GMT'), (b'Via', b'1.1 varnish'), (b'X-Served-By',                                  
+                    b'cache-sin-wsss1830066-SIN'), (b'X-Cache', b'HIT'), (b'X-Cache-Hits', b'26'), (b'X-Timer',                              
+                    b'S1750080152.556065,VS0,VE0'), (b'Vary', b'Authorization,Accept-Encoding'),                                             
+                    (b'Access-Control-Allow-Origin', b'*'), (b'Cross-Origin-Resource-Policy', b'cross-origin'),                              
+                    (b'X-Fastly-Request-ID', b'59abf1e54764975a259b318479282c7fab5300fd'), (b'Expires', b'Mon, 16 Jun 2025                   
+                    13:27:31 GMT'), (b'Source-Age', b'142')])                                                                                
+           INFO     HTTP Request: GET                                                                                         _client.py:1025
+                    https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200                
+                    OK"                                                                                                                      
+           DEBUG    receive_response_body.started request=<Request >                                                             _trace.py:47
+           DEBUG    receive_response_body.complete                                                                               _trace.py:47
+           DEBUG    response_closed.started                                                                                      _trace.py:47
+           DEBUG    response_closed.complete                                                                                     _trace.py:47
+           DEBUG    close.started                                                                                                _trace.py:47
+           DEBUG    close.complete                                                                                               _trace.py:47
+           DEBUG    Using AiohttpTransport...                                                                             http_handler.py:533
+           DEBUG    Creating AiohttpTransport...                                                                          http_handler.py:557
+           DEBUG    [Non-Blocking] Unable to import GenericAPILogger - LiteLLM Enterprise Feature - No module named    litellm_logging.py:169
+                    'litellm_enterprise'                                                                                                     
+[13:22:32] DEBUG    [Non-Blocking] Unable to import _ENTERPRISE_ResponsesSessionHandler - LiteLLM Enterprise Feature -   transformation.py:17
+                    No module named 'litellm_enterprise'                                                                                     
+           DEBUG    Using AiohttpTransport...                                                                             http_handler.py:533
+           DEBUG    Creating AiohttpTransport...                                                                          http_handler.py:557
+           DEBUG    Using AiohttpTransport...                                                                             http_handler.py:533
+           DEBUG    Creating AiohttpTransport...                                                                          http_handler.py:557
+           DEBUG                                                                                                                 utils.py:340
+                                                                                                                                             
+           DEBUG    [92mRequest to litellm:[0m                                                                                   utils.py:340
+           DEBUG    [92mlitellm.completion(modelid='sambanova/Meta-Llama-3.2-3B-Instruct',                                       utils.py:340
+                    apikey='b4dff99d-100c-4337-8599-593ad0d5f068', temperature=0.6, max_tokens=1000, messages=[{'role': 'user',              
+                    'content': [{'type': 'text', 'text': 'nWhat is BootyDance? and BootyCandy?'}]}],                                         
+                    model='anthropic/claude-3-5-sonnet-20240620', api_base='https://api.sambanova.ai/v1', api_key=None)[0m                   
+           DEBUG                                                                                                                 utils.py:340
+                                                                                                                                             
+           DEBUG    self.optional_params: {}                                                                           litellm_logging.py:461
+           DEBUG    SYNC kwargs: False; litellm.cache: None; kwargs.get('cache')['no-cache']: False                              utils.py:340
+           DEBUG    checking potential_model_names in litellm.model_cost: {'split_model': 'claude-3-5-sonnet-20240620',         utils.py:4481
+                    'combined_model_name': 'anthropic/claude-3-5-sonnet-20240620', 'stripped_model_name':                                    
+                    'claude-3-5-sonnet-20240620', 'combined_stripped_model_name': 'anthropic/claude-3-5-sonnet-20240620',                    
+                    'custom_llm_provider': 'anthropic'}                                                                                      
+           INFO                                                                                                                 utils.py:3119
+                    LiteLLM completion() model= claude-3-5-sonnet-20240620; provider = anthropic                                             
+           DEBUG                                                                                                                utils.py:3122
+                    LiteLLM: Params passed to completion() {'model': 'claude-3-5-sonnet-20240620', 'functions': None,                        
+                    'function_call': None, 'temperature': 0.6, 'top_p': None, 'n': None, 'stream': None, 'stream_options':                   
+                    None, 'stop': None, 'max_tokens': 1000, 'max_completion_tokens': None, 'modalities': None, 'prediction':                 
+                    None, 'audio': None, 'presence_penalty': None, 'frequency_penalty': None, 'logit_bias': None, 'user': None,              
+                    'custom_llm_provider': 'anthropic', 'response_format': None, 'seed': None, 'tools': None, 'tool_choice':                 
+                    None, 'max_retries': None, 'logprobs': None, 'top_logprobs': None, 'extra_headers': None, 'api_version':                 
+                    None, 'parallel_tool_calls': None, 'drop_params': None, 'allowed_openai_params': None, 'reasoning_effort':               
+                    None, 'additional_drop_params': None, 'messages': [{'role': 'user', 'content': [{'type': 'text', 'text':                 
+                    'nWhat is BootyDance? and BootyCandy?'}]}], 'thinking': None, 'web_search_options': None, 'modelid':                     
+                    'sambanova/Meta-Llama-3.2-3B-Instruct', 'apikey': 'b4dff99d-100c-4337-8599-593ad0d5f068'}                                
+           DEBUG                                                                                                                utils.py:3125
+                    LiteLLM: Non-Default params passed to completion() {'temperature': 0.6, 'max_tokens': 1000}                              
+           DEBUG    Final returned optional params: {'temperature': 0.6, 'max_tokens': 1000, 'modelid':                          utils.py:340
+                    'sambanova/Meta-Llama-3.2-3B-Instruct', 'apikey': 'b4dff99d-100c-4337-8599-593ad0d5f068'}                                
+           DEBUG    self.optional_params: {'temperature': 0.6, 'max_tokens': 1000, 'modelid':                          litellm_logging.py:461
+                    'sambanova/Meta-Llama-3.2-3B-Instruct'}                                                                                  
+           DEBUG    checking potential_model_names in litellm.model_cost: {'split_model': 'claude-3-5-sonnet-20240620',         utils.py:4481
+                    'combined_model_name': 'anthropic/claude-3-5-sonnet-20240620', 'stripped_model_name':                                    
+                    'claude-3-5-sonnet-20240620', 'combined_stripped_model_name': 'anthropic/claude-3-5-sonnet-20240620',                    
+                    'custom_llm_provider': 'anthropic'}                                                                                      
+           DEBUG    Logging Details LiteLLM-Failure Call: []                                                          litellm_logging.py:2216
