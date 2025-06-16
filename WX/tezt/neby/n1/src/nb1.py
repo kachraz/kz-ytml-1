@@ -20,7 +20,9 @@ NB_T = os.getenv("NBY")
 
 def nb1_main():
     brint_env()
-# --- Sun functions ---
+
+
+# --- Sub functions ---
 
 
 def brint_env():
