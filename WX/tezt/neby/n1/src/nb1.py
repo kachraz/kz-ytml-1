@@ -59,4 +59,4 @@ def nb_test1():
         temperature=0.5
     )
 
-    ppr(completion.to_json, expand_all=True)
+    ppr(completion.choices[0].message.content, expand_all=True)
