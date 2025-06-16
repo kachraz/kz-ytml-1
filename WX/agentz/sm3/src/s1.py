@@ -8,6 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich.pretty import pprint as ppr
+from smolagents import CodeAgent, InferenceClientModel
 
 from .utz import header1
 
@@ -23,7 +24,7 @@ env_list = [NB_T, SA_T]
 
 
 def s1_main():
-    brint_env()
+    hf1()
 
 
 # --- SubFunc ---
@@ -32,3 +33,18 @@ def s1_main():
 def brint_env():
     header1("BrintaEnv")
     ppr(env_list, expand_all=True)
+
+
+# HF Example 1
+
+def hf1():
+    header1("HF Main Example1")
+
+    model = InferenceClientModel()
+    agent = CodeAgent(
+        tools=[],
+        model=model,
+    )
+
+    result = agent.run("What is BootyDance?")
+    ppr(result)
