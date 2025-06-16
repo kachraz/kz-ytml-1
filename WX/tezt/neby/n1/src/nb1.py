@@ -49,7 +49,7 @@ def nb_test1():
     ]
 
     completion = client.chat.completions.create(
-        model=modelz[1],
+        model=modelz[0],
         messages=[
             {
                 "role": "user",
