@@ -8,7 +8,13 @@ import os
 
 from dotenv import load_dotenv
 from rich.pretty import pprint as ppr
-from smolagents import CodeAgent, InferenceClientModel, LiteLLMModel, LiteLLMRouterModel
+from smolagents import (
+    CodeAgent,
+    GradioUI,
+    InferenceClientModel,
+    LiteLLMModel,
+    LiteLLMRouterModel,
+)
 
 from .utz import header1
 
@@ -29,7 +35,8 @@ def s1_main():
     # hf2()
     # hf3()
     # hf4()
-    hf5_llm_ro()
+    # hf5_llm_ro()
+    hf5_llm_ro_3g()
 
 
 # --- SubFunc ---
@@ -144,7 +151,7 @@ def hf4():
         "Explain the difference between BootyDance and BootyCandy.")
     print(result)
 
-# Using the Litellm Router
+# Using the Litellm Router - this method works now next we will try it with agent
 
 
 def hf5_llm_ro():
@@ -166,7 +173,91 @@ def hf5_llm_ro():
         model_id="Meta-Llama-3.2-3B-Instruct",
         model_list=[
             {
-                "model_name": "Meta-Llama-3.2-3B-Instruct"
+                "model_name": "Meta-Llama-3.2-3B-Instruct",
+                "litellm_params": {
+                    "model": "sambanova/Meta-Llama-3.2-3B-Instruct",
+                    "api_key": SA_T
+                }
             }
         ]
     )
+
+    ppr(model(messages))
+
+# Tetsing it with an agent now
+
+
+def hf5_llm_ro_2():
+    header1("HF LiteLLM Router")
+
+    messages = [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "nWhat is BootyDance? and BootyCandy?"
+                }
+            ]
+        }
+    ]
+
+    model = LiteLLMRouterModel(
+        model_id="Meta-Llama-3.2-3B-Instruct",
+        model_list=[
+            {
+                "model_name": "Meta-Llama-3.2-3B-Instruct",
+                "litellm_params": {
+                    "model": "sambanova/Meta-Llama-3.2-3B-Instruct",
+                    "api_key": SA_T
+                }
+            }
+        ]
+    )
+
+    agent = CodeAgent(
+        model=model,
+        tools=[],
+        add_base_tools=True
+    )
+
+    agent.run(messages)
+
+# --- Now testing with the Gradio UI
+
+
+def hf5_llm_ro_3g():
+    header1("HF LiteLLM Router")
+
+    messages = [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "nWhat is BootyDance? and BootyCandy?"
+                }
+            ]
+        }
+    ]
+
+    model = LiteLLMRouterModel(
+        model_id="Meta-Llama-3.2-3B-Instruct",
+        model_list=[
+            {
+                "model_name": "Meta-Llama-3.2-3B-Instruct",
+                "litellm_params": {
+                    "model": "sambanova/Meta-Llama-3.2-3B-Instruct",
+                    "api_key": SA_T
+                }
+            }
+        ]
+    )
+
+    agent = CodeAgent(
+        model=model,
+        tools=[],
+        add_base_tools=True
+    )
+
+    GradioUI(agent).launch()
